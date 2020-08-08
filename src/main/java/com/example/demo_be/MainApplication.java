@@ -16,6 +16,9 @@ public class MainApplication {
 
 		Assert.notNull("${APP_NAME}", "Please insert enviroment variable APP_NAME");
 		Assert.notNull("${APP_VERSION}", "Please insert enviroment variable APP_VERSION");
+		Assert.notNull(System.getenv("DB_CONN"), "Please insert enviroment variable DB_CONN");
+		Assert.notNull(System.getenv("DB_USER"), "Please insert enviroment variable DB_USER");
+		Assert.notNull(System.getenv("DB_PWD"), "Please insert enviroment variable DB_PWD");
 
 		SpringApplication.run(MainApplication.class, args);
 	}
