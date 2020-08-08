@@ -3,6 +3,8 @@ package com.example.demo_be;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,6 +13,8 @@ import org.springframework.util.Assert;
 
 @SpringBootApplication
 public class MainApplication {
+
+	protected static final Logger logger = LoggerFactory.getLogger(MainApplication.class.getName());
 
 	public static void main(String[] args) {
 
@@ -21,6 +25,8 @@ public class MainApplication {
 		Assert.notNull(System.getenv("DB_PWD"), "Please insert enviroment variable DB_PWD");
 
 		SpringApplication.run(MainApplication.class, args);
+
+		logger.error("Eempio di log di errore");
 	}
 
 	//link swagger openApi http://localhost:8080/swagger-ui/index.html?url=/v3/api-docs
