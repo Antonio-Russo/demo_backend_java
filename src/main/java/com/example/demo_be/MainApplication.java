@@ -14,8 +14,6 @@ import org.springframework.util.Assert;
 @SpringBootApplication
 public class MainApplication {
 
-	protected static final Logger logger = LoggerFactory.getLogger(MainApplication.class.getName());
-
 	public static void main(String[] args) {
 
 		Assert.notNull("${APP_NAME}", "Please insert enviroment variable APP_NAME");
@@ -23,10 +21,9 @@ public class MainApplication {
 		Assert.notNull(System.getenv("DB_CONN"), "Please insert enviroment variable DB_CONN");
 		Assert.notNull(System.getenv("DB_USER"), "Please insert enviroment variable DB_USER");
 		Assert.notNull(System.getenv("DB_PWD"), "Please insert enviroment variable DB_PWD");
+		Assert.notNull(System.getenv("SPRING_PROFILES_ACTIVE"), "Please insert enviroment variable SPRING_PROFILES_ACTIVE");
 
 		SpringApplication.run(MainApplication.class, args);
-
-		logger.error("Eempio di log di errore");
 	}
 
 	//link swagger openApi http://localhost:8080/swagger-ui/index.html?url=/v3/api-docs
