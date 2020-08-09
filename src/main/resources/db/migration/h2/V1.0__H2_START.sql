@@ -6,4 +6,4 @@ CREATE TABLE users (
 );
 
 insert into users (username,password)
-    values ('antonio','TuNnmJLmrFpbUT66f9Up02PXqWUIQhxdvUSwGzSc9RQ=')
+    values ('antonioTest','TuNnmJLmrFpbUT66f9Up02PXqWUIQhxdvUSwGzSc9RQ=')

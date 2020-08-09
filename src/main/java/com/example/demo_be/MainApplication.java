@@ -22,6 +22,8 @@ public class MainApplication {
 		Assert.notNull(System.getenv("DB_USER"), "Please insert enviroment variable DB_USER");
 		Assert.notNull(System.getenv("DB_PWD"), "Please insert enviroment variable DB_PWD");
 		Assert.notNull(System.getenv("SPRING_PROFILES_ACTIVE"), "Please insert enviroment variable SPRING_PROFILES_ACTIVE");
+		Assert.notNull(System.getenv("JWT_SECRET"), "Please insert enviroment variable JWT_SECRET");
+		Assert.notNull(System.getenv("JWT_HOUR_EXPIRATION"), "Please insert enviroment variable JWT_HOUR_EXPIRATION");
 
 		SpringApplication.run(MainApplication.class, args);
 	}
