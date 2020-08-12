@@ -1,4 +1,4 @@
-package com.example.demo_be.configs;
+package com.example.demo_be.providers;
 
 import com.example.demo_be.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

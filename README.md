@@ -40,5 +40,14 @@ Seguendo la linea dei commit imparerai in ordine a :
     * aggiunto uno Unit Test per UserService
     * aggiunti due Test di integrazione per i metodi del controller di autorizzazione
     * piccoli fix su bug della JwtUtils per errori trovati con i test di integrazione
-* ---
+* Implementate 3 API per la gestion delle presenze (controller,repository e service)
+    * API POST /presence per inserire/modificare presenza (per ora non faccio controlli particolari se non di validazione della request)
+    * API DELETE /presence per cancellare un presenza
+    * API POST /listpresences per ottenere la lista prensenze di un utente per mese/anno
+ * Implementato un handler globale delle exceptions per gestire tra l'altro anche la validazione dei paramatri delle request
+ * Aggiunta la entity Presence e il suo DTO per evitare di esporre la entity nelle API e integrare il sistema di validation-api di SpringBoot
+ * Creato un ErrorResponce globale per unificare le risposte di errore delle API e fix vari.
+ * Aggiunti unit Test e integration Test usando la libreria MockMvc
+   
+    
 

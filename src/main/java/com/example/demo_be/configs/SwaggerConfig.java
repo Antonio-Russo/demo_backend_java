@@ -19,7 +19,7 @@ import java.util.Optional;
 public class SwaggerConfig {
     private List<Parameter> headersParameters() {
         List<Parameter> parameters = new ArrayList<>();
-        parameters.add(new HeaderParameter().schema(new StringSchema()).required(true).name("Authorization").description("Access token (example Bearer jkjjijqiwedijwqedweij9dwedwdwed)"));
+        parameters.add(new HeaderParameter().schema(new StringSchema()).required(true).name("Authorization-token").description("Access token (example Bearer jkjjijqiwedijwqedweij9dwedwdwed)"));
         parameters.add(new HeaderParameter().schema(new StringSchema()).required(false).name("Accept-Language").description("Preferred languages"));
         return parameters;
     }

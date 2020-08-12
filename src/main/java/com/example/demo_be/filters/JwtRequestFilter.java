@@ -31,7 +31,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         //request.getHeader("User-Agent");
         //request.getHeader("Accept-Language");
 
-        final String authorizationHeader = request.getHeader("Authorization");
+        final String authorizationHeader = request.getHeader("Authorization-token");
 
 
         if (authorizationHeader != null && isValidSchemaToken(authorizationHeader)) {
